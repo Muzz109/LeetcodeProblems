@@ -45,3 +45,4 @@ var longestPalindrome = function(s) {
     if(hasOddValue===true) return count+1; // if it has odd values +1 
     else return count;
 };
+ Important concepts :- Logic for Odd even count values in hashmap values
