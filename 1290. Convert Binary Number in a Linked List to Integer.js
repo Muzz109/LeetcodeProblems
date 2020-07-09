@@ -41,3 +41,14 @@ var getDecimalValue = function(head) {
     
    
 };
+-----------------------------------------Solution 2 
+
+let binarystr = '';
+    
+    while(head){
+        
+        binarystr += head.val;
+        head= head.next
+    }
+   
+    return parseInt(binarystr,2);
