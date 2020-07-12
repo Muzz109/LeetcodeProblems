@@ -77,3 +77,31 @@ var getIntersectionNode = function(headA, headB) {
 };
 
 Solution 1:- run two for loops and when you meet the commom node return the node at the point of intersection or else return null
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Solution 2:-Usinh hashmap
+ 
+ var getIntersectionNode = function(headA, headB) {
+    
+    let p = headA;
+    let q = headB;
+    let hastable = new Map();
+    
+    while(p!=null){
+        
+        hastable.set(p ,1);
+        p=p.next;
+    }
+if(hastable.size == 0){
+    return null
+}
+while(q!=null){
+    
+    if(hastable.has(q)){
+        
+        return q
+    }
+    q=q.next;
+}
+    
+    return null;
+};
